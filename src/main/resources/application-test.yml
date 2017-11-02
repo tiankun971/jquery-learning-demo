@@ -1,0 +1,41 @@
+# Server configuration
+server:
+  port: 9610
+  contextPath:
+
+# Spring configuration
+spring:
+########################################################
+### i18n setting.
+########################################################
+# 指定message的basename，多个以逗号分隔，如果不加包名的话，默认从classpath路径开始，默认: messages
+  messages:
+#    basename: i18n/messages
+# 设定加载的资源文件缓存失效时间，-1的话为永不过期，默认为-1
+    cache-seconds : 3600
+##设定Message bundles的编码，默认: UTF-8
+    encoding : UTF-8
+  application:
+    name: jquery-learning-demo 
+    
+########################################################  
+###THYMELEAF (ThymeleafAutoConfiguration)  
+######################################################## 
+  thymeleaf:
+    prefix: classpath:/templates/  
+    suffix: .html  
+    mode: HTML5  
+    encoding: UTF-8  
+    # ;charset=<encoding> is added  
+    content-type: text/html
+    # set to false for hot refresh
+    cache: true
+
+# Logging configuration
+logging:
+  level:
+    org.springframework:
+      data: INFO
+      security: INFO  
+    org.springframework.web: INFO
+    com.github.kuntian: INFO     
