@@ -2,47 +2,89 @@
 <html xmlns:th="http://www.thymeleaf.org"
 	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
 <head>
-	<meta charset="utf-8" />
-	<title>Welcome - tiankun Admin</title>
-	<meta name="renderer" content="webkit" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-	<meta http-equiv="Access-Control-Allow-Origin" content="*" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
-	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
-	<meta name="apple-mobile-web-app-capable" content="yes" />
-	<meta name="format-detection" content="telephone=no" /> 
-	 	
-	<!-- 顶部Logo -->
-	<link rel="icon" th:href="@{/images/favicon.ico}" />
+<meta charset="utf-8" />
+<title>Welcome - tiankun Admin</title>
+<meta name="renderer" content="webkit" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta http-equiv="Access-Control-Allow-Origin" content="*" />
+<meta name="viewport"
+	content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="format-detection" content="telephone=no" />
 
-	<!-- LayUI 相关资源 -->
-	<link rel="stylesheet" th:href="@{/layui/css/layui.css}" />
-	<link rel="stylesheet" href="//at.alicdn.com/t/font_tnyc012u2rlwstt9.css" media="all" />
-	<link rel="stylesheet" th:href="@{/css/main.css}" />
+<!-- 顶部Logo -->
+<link rel="icon" th:href="@{/images/favicon.ico}" />
 
-	<!-- font awesome 图标 -->	
-	<link rel="stylesheet" th:href="@{/components/font-awesome/css/font-awesome.css}" />
-	<!-- ace bootstrap 相关资源 -->
-	<link rel="stylesheet" th:href="@{/assets/css/bootstrap.css}" />
-	<link rel="stylesheet" th:href="@{/assets/css/ace-fonts.css}" />
-	<link rel="stylesheet" th:href="@{/assets/css/ace.css}" id="main-ace-style" />
-	<link rel="stylesheet" th:href="@{/assets/css/ace-skins.css}" />
-	
+<!-- LayUI 相关资源 -->
+<link rel="stylesheet" th:href="@{/layui/css/layui.css}" />
+<link rel="stylesheet"
+	href="//at.alicdn.com/t/font_tnyc012u2rlwstt9.css" media="all" />
+<link rel="stylesheet" th:href="@{/css/main.css}" />
+
+<!-- font awesome 图标 -->
+<link rel="stylesheet"
+	th:href="@{/components/font-awesome/css/font-awesome.css}" />
+<!-- ace bootstrap 相关资源 -->
+<link rel="stylesheet" th:href="@{/assets/css/bootstrap.css}" />
+<link rel="stylesheet" th:href="@{/assets/css/ace-fonts.css}" />
+<link rel="stylesheet" th:href="@{/assets/css/ace.css}"
+	id="main-ace-style" />
+<link rel="stylesheet" th:href="@{/assets/css/ace-skins.css}" />
 </head>
 <body>
-	<p th:text="'标题:' + ${welcome}" />
-	<div class="layui-tab">
-	  <ul class="layui-tab-title">
-	    <li class="layui-this">标题一</li>
-	    <li>标题二</li>
-	    <li>标题三</li>
-	  </ul>
-	  <div class="layui-tab-content">
-	    <div class="layui-tab-item layui-show">内容1</div>
-	    <div class="layui-tab-item">内容2</div>
-	    <div class="layui-tab-item">内容3</div>
-	  </div>
-	</div>	
+	<p th:text="'标题::' + ${welcome}" />
+	<div class="layui-container">
+		常规布局（以手机屏幕桌面为例）：
+		<div class="layui-row layui-col-space10">
+			<div class="layui-col-md9 layui-anim layui-anim-rotate">
+				<div class="grid grid-bg1"><i class="layui-icon">&#xe63d;</i>你的内容9/12</div>
+			</div>
+			<div class="layui-col-md3 layui-anim layui-anim-rotate">
+				<div class="grid grid-bg1"><i class="layui-icon">&#xe63e;</i>你的内容3/12</div>
+			</div>
+		</div>
+		移动设备、平板、桌面端的不同表现：
+		<div class="layui-row layui-col-space10">
+			<div
+				class="layui-col-xs6 layui-col-sm6 layui-col-md4 layui-show-md-inline">
+				<div class="grid grid-bg1">移动：6/12 | 平板：6/12 | 桌面：4/12</div>
+			</div>
+			<div
+				class="layui-col-xs6 layui-col-sm6 layui-col-md4 layui-show-md-block">
+				<div class="grid grid-bg2">移动：6/12 | 平板：6/12 | 桌面：4/12</div>
+			</div>
+			<div
+				class="layui-col-xs4 layui-col-sm12 layui-col-md4 layui-show-md-inline-block">
+				<div class="grid grid-bg1">移动：4/12 | 平板：12/12 | 桌面：4/12</div>
+			</div>
+			<div class="layui-col-xs4 layui-col-sm7 layui-col-md8">
+				<div class="grid grid-bg2">移动：4/12 | 平板：7/12 | 桌面：8/12</div>
+			</div>
+			<div class="layui-col-xs4 layui-col-sm5 layui-col-md4">
+				<div class="grid grid-bg3">移动：4/12 | 平板：5/12 | 桌面：4/12</div>
+			</div>
+		</div>
+
+		<div class="layui-row layui-col-space5">
+			<div class="layui-col-md5">
+				<div class="layui-row grid grid-bg1">
+					<div class="layui-col-md3">内部列3</div>
+					<div class="layui-col-md9">内部列9</div>
+					<div class="layui-col-md12">内部列12</div>
+				</div>
+			</div>
+			<div class="layui-col-md7">
+				<div class="layui-row grid grid-bg2">
+					<div class="layui-col-md12">内部列12</div>
+					<div class="layui-col-md3">内部列3</div>
+					<div class="layui-col-md9">内部列9</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
 	<script th:src="@{/layui/layui.js}"></script>
 	<script th:src="@{/js/index.js}"></script>
 </body>

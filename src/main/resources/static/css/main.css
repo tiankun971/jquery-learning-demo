@@ -1,2 +1,24 @@
 /*公共样式*/
-.main_body{ min-width:320px; }
+.main_body {
+	min-width: 320px;
+}
+
+.grid {
+	padding: 10px;
+	line-height: 50px;
+	text-align: center;
+	background-color: #79C48C;
+	color: #fff;
+}
+
+.grid-bg1 {
+	background-color: #63BA79;
+}
+
+.grid-bg2 {
+	background-color: #49A761;
+}
+
+.grid-bg3 {
+	background-color: #38814A;
+}
