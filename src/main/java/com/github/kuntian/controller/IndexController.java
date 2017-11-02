@@ -1,4 +1,4 @@
-package com.github.kuntian.config.controller;
+package com.github.kuntian.controller;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -22,7 +22,7 @@ public class IndexController {
 	 *            current page model
 	 * @return
 	 */
-	@RequestMapping("/index")
+	@RequestMapping(value = { "/", "/index" })
 	public String index(Model model) {
 		String userName = getPrincipal();
 		LOGGER.info("登录的用户是[{}]", userName);

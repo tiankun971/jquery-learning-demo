@@ -1,4 +1,4 @@
-package com.github.kuntian.config.controller;
+package com.github.kuntian.controller;
 
 import java.util.Locale;
 
