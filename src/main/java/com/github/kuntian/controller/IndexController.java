@@ -2,11 +2,13 @@ package com.github.kuntian.controller;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 /**
  * @author kun.tian(https://github.com/tiankun971)
@@ -28,6 +30,18 @@ public class IndexController {
 		LOGGER.info("登录的用户是[{}]", userName);
 		model.addAttribute("userName", userName);
 		return "index";
+	}
+
+	/**
+	 * 返回main页面
+	 * 
+	 * @param model
+	 * @return
+	 */
+	@PreAuthorize("hasAnyRole('user', 'admin')")
+	@RequestMapping(value = "/page/main.html", method = RequestMethod.GET)
+	public String getMainPage(Model model) {
+		return "page/main";
 	}
 
 	private String getPrincipal() {
