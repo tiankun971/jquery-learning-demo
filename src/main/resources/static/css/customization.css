@@ -1,0 +1,120 @@
+.layui-btn-trans {
+    background-color: transparent !important;
+    color: #1D1885 !important;
+}
+
+.float-right{
+    float: right;
+}
+
+.layui-btn-blue{
+    background-color: #1D1885 !important;
+}
+
+.layui-btn-cancel{
+    background-color: #D0021B  !important;
+}
+
+.layui-btn-delete{
+    background-color:#fff !important;
+    color: #D0021B;
+    margin: 2px !important;
+}
+
+.layui-btn-delete:hover{
+    color: #FF0000;
+}
+
+.sel-container{
+    position:relative;
+    height:300px;
+}
+
+.sel-container .text{
+    background:url();
+    text-align: center;
+    vertical-align: middle;
+    color:#000;
+    margin:10px auto;
+}
+
+.layui-icon img{
+    margin-top: 3px;
+}
+
+
+.layui-timeline {
+    padding-left: 5px
+}
+
+.layui-timeline-item {
+    position: relative;
+    padding-bottom: 20px
+}
+
+.layui-timeline-axis {
+    position: absolute;
+    left: -5px;
+    top: 0;
+    z-index: 10;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    background-color: #fff;
+    color: #5FB878;
+    border-radius: 50%;
+    text-align: center;
+    cursor: pointer
+}
+
+.layui-timeline-axis:hover {
+    color: #FF5722
+}
+
+.layui-timeline-item:before {
+    content: '';
+    position: absolute;
+    left: 5px;
+    top: 0;
+    z-index: 0;
+    width: 1px;
+    height: 100%;
+    background-color: #e2e2e2
+}
+
+.layui-timeline-item:last-child:before {
+    display: none
+}
+
+.layui-timeline-item:first-child:before {
+    display: block
+}
+
+.layui-timeline-content {
+    padding-left: 25px
+}
+
+.layui-badge,.layui-badge-rim {
+    line-height: 18px;
+    padding: 0 5px
+}
+
+.layui-timeline-title {
+    position: relative;
+    margin-bottom: 10px
+}
+
+.layui-timeline-axis{
+    color: #BBB9DA !important;
+}
+
+.layui-elem-quote{
+    border-left: 0 !important;
+}
+
+/*自定义样式*/
+.header-logo{	
+  margin: -4px 8px 0 0;
+  border: 2px solid #FFF;
+  max-width: 50px;
+}
